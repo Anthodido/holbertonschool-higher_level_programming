@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+for a in range(9):
+    for b in range(a + 1, 10):
+        if a == 8 and b == 9:
+            end = "\n"
+        else:
+            end = ", "
+        print("{a}{b}".format(a=a, b=b), end=end)
