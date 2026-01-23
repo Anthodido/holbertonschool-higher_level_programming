@@ -1,0 +1,33 @@
+Tests doctest pour text_indentation(text)
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Cas normal : ponctuation déclenche 2 sauts de ligne
+>>> text_indentation("Salut.  Ca va?  Oui: super")
+Salut.
+
+Ca va?
+
+Oui:
+
+super
+
+Pas d'espace au début/fin des lignes
+>>> text_indentation("   Hello.   World  ")
+Hello.
+
+World
+
+Texte sans ponctuation spéciale : doit imprimer tel quel (sans espaces début/fin)
+>>> text_indentation("   ABC DEF   ")
+ABC DEF
+
+Erreurs : text n'est pas une string
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
