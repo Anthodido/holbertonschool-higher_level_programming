@@ -3,11 +3,12 @@
 
 
 def text_indentation(text):
-     if not isinstance(text, str):
+    """Print a text with 2 new lines after each '.', '?' and ':'."""
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
 
     buffer = ""
-    skip_space = True  # évite les espaces en début de ligne
+    skip_space = True
 
     for ch in text:
         if skip_space and ch == " ":
