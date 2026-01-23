@@ -1,0 +1,42 @@
+Tests (doctest) pour print_square(size)
+
+On importe la fonction :
+>>> print_square = __import__('4-print_square').print_square
+
+Cas nominal : carré 4x4
+>>> print_square(4)
+####
+####
+####
+####
+
+Cas size = 0 (ne doit rien afficher)
+>>> print_square(0)
+
+Cas size = 1
+>>> print_square(1)
+#
+
+Erreur : size négatif
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+Erreur : size n'est pas un int (string)
+>>> print_square("4")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Erreur : size float (même si positif)
+>>> print_square(4.0)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Cas spécial demandé : float négatif -> TypeError (pas ValueError)
+>>> print_square(-1.0)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
