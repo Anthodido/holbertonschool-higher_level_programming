@@ -1,0 +1,29 @@
+Tests pour la fonction ``say_my_name`` :
+Elle doit afficher : "My name is <first_name> <last_name>"
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Cas normal (prénom + nom) :
+
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+Cas avec seulement le prénom (last_name par défaut = "") :
+
+>>> say_my_name("Bob")
+My name is Bob 
+
+Cas d’erreur : first_name n’est pas une string :
+
+>>> say_my_name(12, "White")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+Cas d’erreur : last_name n’est pas une string :
+
+>>> say_my_name("John", 13)
+Traceback (most recent call last):
+TypeError: last_name must be a string
