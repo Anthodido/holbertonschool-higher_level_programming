@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""je défini ma classe en square"""
+"""Ce module définit une classe Square."""
 
 class Square:
     pass
