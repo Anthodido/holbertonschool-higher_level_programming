@@ -32,3 +32,24 @@ class Circle(Shape):
     def perimeter(self):
         """Calcule et retourne le périmètre du cercle."""
         return 2 * pi * self.radius
+
+    class Rectangle(Shape):
+    """Classe représentant un rectangle défini par une largeur et une hauteur."""
+
+    def __init__(self, width, height):
+        """Initialise un rectangle.
+
+        Args:
+            width (float|int): largeur du rectangle.
+            height (float|int): hauteur du rectangle.
+        """
+        self.width = width
+        self.height = height
+
+    def area(self):
+        """Calcule et retourne l'aire du rectangle."""
+        return self.width * self.height
+
+    def perimeter(self):
+        """Calcule et retourne le périmètre du rectangle."""
+        return 2 * (self.width + self.height)
