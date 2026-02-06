@@ -1,60 +1,55 @@
 #!/usr/bin/python3
-
-
+"""Geometric shapes module."""
 from abc import ABC, abstractmethod
-from math import pi
+import math
 
 
 class Shape(ABC):
-    """Classe abstraite shape."""
+    """Abstract base class for geometric shapes."""
 
     @abstractmethod
     def area(self):
-        """Calcule et retourne l'aire de la forme."""
+        """Calculate area of the shape."""
         pass
 
     @abstractmethod
     def perimeter(self):
-        """Calcule et retourne le périmètre de la forme."""
+        """Calculate perimeter of the shape."""
         pass
 
 
 class Circle(Shape):
+    """Circle class inheriting from Shape."""
 
     def __init__(self, radius):
-        """Classe représentant un cercle défini par un rayon."""
-        self.radius = abs(radius)
+        self.radius = radius
 
     def area(self):
-        """Calcule et retourne l'aire de la forme."""
-        return pi * (self.radius ** 2)
+        """Return area of circle."""
+        return math.pi * self.radius ** 2
 
     def perimeter(self):
-        """Calcule et retourne le périmètre du cercle."""
-        return 2 * pi * self.radius
+        """Return circumference of circle."""
+        return 2 * math.pi * self.radius
 
-    class Rectangle(Shape):
-    """Classe représentant un rectangle défini par une largeur et une hauteur."""
+
+class Rectangle(Shape):
+    """Rectangle class inheriting from Shape."""
 
     def __init__(self, width, height):
-        """Initialise un rectangle.
-
-        Args:
-            width (float|int): largeur du rectangle.
-            height (float|int): hauteur du rectangle.
-        """
         self.width = width
         self.height = height
 
     def area(self):
-        """Calcule et retourne l'aire du rectangle."""
+        """Return area of rectangle."""
         return self.width * self.height
 
     def perimeter(self):
-        """Calcule et retourne le périmètre du rectangle."""
+        """Return perimeter of rectangle."""
         return 2 * (self.width + self.height)
 
-    def shape_info(shape):
+
+def shape_info(shape):
     """Print area and perimeter of a shape."""
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
