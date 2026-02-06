@@ -53,3 +53,8 @@ class Circle(Shape):
     def perimeter(self):
         """Calcule et retourne le périmètre du rectangle."""
         return 2 * (self.width + self.height)
+
+    def shape_info(shape):
+    """Print area and perimeter of a shape."""
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
