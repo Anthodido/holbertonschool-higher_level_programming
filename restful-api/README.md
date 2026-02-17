@@ -23,3 +23,11 @@ ___
 
 Code/Methode http courant
 
+| Méthode | Intention                     | Notes importantes                            |
+|---------|-------------------------------|----------------------------------------------|
+| GET     | Lire une ressource            | Sans effet côté serveur (idempotent).        |
+| POST    | Créer / déclencher une action | Non-idempotent par défaut.                   |
+| PUT     | Remplacer une ressource       | Idempotent ; envoie l'objet complet.         |
+| PATCH   | Modifier partiellement        | Idempotent souvent, selon implémentation.    |
+| DELETE  | Supprimer                     | Idempotent en pratique (suppression répétée).|
+------------------------------------------------------------------------------------------
