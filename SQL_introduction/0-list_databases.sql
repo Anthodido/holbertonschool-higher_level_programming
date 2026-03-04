@@ -1,3 +1,2 @@
---lists all databases of your MySQL server
---lists all databases
+-- lists all databases of your MySQL server
 SELECT * FROM INFORMATION_SCHEMA.SCHEMATA;
