@@ -1,6 +1,7 @@
 #!/usr/bin/node
 /* 10-factorial.js
-Write a script that computes and prints a factorial
+Write a script that computes
+and prints a factorial
 */
 
 function factorial (n) {

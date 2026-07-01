@@ -1,6 +1,8 @@
 #!/usr/bin/node
 /* 11-second_biggest.js
-Write a script that searches the second biggest integer in the list of arguments.
+Write a script that searches the
+second biggest integer in the
+list of arguments.
 */
 
 if (process.argv.length <= 3) {

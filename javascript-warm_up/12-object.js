@@ -1,6 +1,7 @@
 #!/usr/bin/node
 /* 12-object.js
-Update this script to replace the value 12 with 89
+Update this script to
+replace the value 12 with 89
 */
 
 const myObject = {

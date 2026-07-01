@@ -1,6 +1,7 @@
 #!/usr/bin/node
 /* 2-arguments.js
-Write a script that prints a message depending of the number of arguments passed
+Write a script that prints a message depending of
+the number of arguments passed
 */
 
 if (process.argv.length <= 2) {

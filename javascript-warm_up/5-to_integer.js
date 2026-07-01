@@ -1,6 +1,10 @@
 #!/usr/bin/node
+
 /* 5-to_integer.js
-Write a script that prints My number: <first argument converted in integer> if the first argument can be converted to an integer
+Write a script that prints My number:
+<first argument converted in integer>
+if the first argument can be
+converted to an integer
 */
 
 if (parseInt(process.argv[2])) {
