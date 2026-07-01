@@ -38,7 +38,10 @@ def products():
         return render_template('product_display.html', error="Wrong source")
     
     if product_id:
-        product_id = int(product_id)
+        try:
+            product_id = int(product_id)
+        except ValueError:
+            return render_template('product_display.html', error="invalid id")
 
     try:
         if source == 'json':
@@ -60,8 +63,10 @@ def products():
         if not products:
             return render_template('product_display.html', error="Product not found")
         return render_template('product_display.html', products=products)
-    except (FileNotFoundError, sqlite3.Error) as e:
-        return render_template('product_display.html', error="Product not found")
+    except FileNotFoundError:
+        return render_template('product_display.html', error="Data file not found")
+    except sqlite3.Error:
+        return render_template('product_display.html', error="Database error")
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
