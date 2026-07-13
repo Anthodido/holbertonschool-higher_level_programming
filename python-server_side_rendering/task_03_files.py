@@ -37,7 +37,10 @@ def products():
         return render_template('product_display.html', error="Wrong source")
     
     if product_id:
-        product_id = int(product_id)
+        try:
+            product_id = int(product_id)
+        except ValueError:
+            return render_template('product_display.html', error="Product not found")
 
     try:
         if source == 'json':
